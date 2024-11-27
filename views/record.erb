@@ -1,0 +1,8 @@
+<h2>Спасибо, что записались к нам</h2>
+
+<p>Уважаемый(-ая) <%= @username %> мы будем ждать вас <%= @date_time %></p>
+
+<form action="/record" method="POST" role="form">
+  
+    <button type="submit" class="btn btn-primary">Сделать еще одну запись</button>
+</form>
