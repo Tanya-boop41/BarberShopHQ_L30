@@ -33,9 +33,11 @@ end
 post '/visit' do
 	
 	c = Client.new params[:client]
-	c.save
-
-	erb :record
+	if c.save
+		erb :record
+	else 
+		erb "<h3>Заполните пустые поля</h3>"
+	end
 end
 
 post '/record' do
