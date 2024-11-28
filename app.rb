@@ -36,7 +36,8 @@ post '/visit' do
 	if c.save
 		erb :record
 	else 
-		erb "<h3>Заполните пустые поля</h3>"
+		@error = c.errors.full_messages.first
+		erb :visit
 	end
 end
 
